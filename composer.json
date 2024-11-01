@@ -1,0 +1,37 @@
+{
+  "name": "glop/wooglop",
+  "description": "wooglop",
+  "type": "wordpress-plugin",
+  "require": {
+    "composer/installers": "v1.0.6"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "wp-coding-standards/wpcs": "*",
+    "phpunit/phpunit": "6.5.14",
+    "phpcompatibility/php-compatibility": "*",
+    "dealerdirect/phpcodesniffer-composer-installer": "*"
+  },
+  "scripts": {
+    "phpcs": [
+      "phpcs -s -p"
+    ],
+    "phpcbf": [
+      "phpcbf -p"
+    ],
+    "test": [
+      "phpunit"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Daniel Ruiz",
+      "email": "druiz7@gmail.com"
+    }
+  ],
+  "extra": {
+    "installer-paths": {
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"]
+    }
+  }
+}
